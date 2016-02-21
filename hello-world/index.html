@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>React First App</title>
+
+  <script src="js/react.min.js"></script>
+  <script src="js/react-dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+
+</head>
+<body>
+
+</body>
+
+<script type="text/jsx">
+  // Define a React Component Class
+  var HelloWorld = React.createClass({
+    render : function() {
+      return <div>
+        Hello World!
+      </div>
+    }
+  });
+
+  // Ask React to render this Class
+  var element = React.createElement(HelloWorld);
+
+  // Tell to React where to place the rendered element in the DOM
+  ReactDOM.render(element, document.body);
+
+</script>
+</html>
