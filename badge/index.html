@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>React First App</title>
+
+  <script src="js/react.min.js"></script>
+  <script src="js/react-dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+</head>
+<body>
+
+</body>
+
+<script type="text/jsx">
+  // Define a React Component Class
+  var Badge = React.createClass({
+    render : function() {
+      return <button className="btn btn-primary" type="button">
+        {this.props.title}<span className="badge">{this.props.number}</span>
+      </button>
+    }
+  });
+
+  var options = {
+    title: 'Message',
+    number: 4
+  }
+
+  // Ask React to render this Class
+  var element = React.createElement(Badge, options);
+
+  // Tell to React where to place the rendered element in the DOM
+  ReactDOM.render(element, document.body);
+
+</script>
+</html>
